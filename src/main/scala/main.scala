@@ -6,7 +6,7 @@ import org.apache.log4j.{Level, Logger}
 
 object main {
   def main(args: Array[String]): Unit = {
-    val spark = SparkSession.builder().master("local[*]").appName("postgres-test").getOrCreate()
+    val spark = SparkSession.builder().master("local[*]").appName("load-csv-to-postgres").getOrCreate()
     spark.sparkContext.setLogLevel("WARN")
     
     val csvFile = args(0)
